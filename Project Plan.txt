@@ -1,0 +1,37 @@
+Project: Cash Register - Rebuild on correct .net framework.
+
+Planned Features:
+
+Store Balanece
+End of day cashup
+Searching items via catagory - in progress
+Full GUI interface with button menus to access via touch method - In progress
+Ability to enter item codes to find items if known
+ability to give discounts based on codes or if requested by user - in progress
+Stock tracking
+Receipt tracking - in progress
+
+Planned Tech Stack Usage:
+
+C#
+Microsoft SQL Server
+WPF
+
+
+Assumptions:
+
+This system will have a scanner system attached that will know how to interface with it, assist in scanning items stright into device ect.
+
+
+
+Planned Interface:
+
+3 Column Design -
+
+- Main recipt section, keeps track of goods scanned, discounts ect and gives overall price
+- button control section, allows user input via touch controls
+- extra button section, access to alt functions such as discount application and viewing items via catagorys
+
+Sub menus - 
+
+- catatgorys, allows user to select from items by catagory to add price.
