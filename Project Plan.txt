@@ -8,6 +8,7 @@ Searching items via catagory - in progress
 Full GUI interface with button menus to access via touch method - In progress
 Ability to enter item codes to find items if known
 ability to give discounts based on codes or if requested by user - in progress
+Ability to find items via catagory
 Stock tracking
 Receipt tracking - in progress
 
