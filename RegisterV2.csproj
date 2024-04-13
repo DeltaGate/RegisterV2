@@ -149,6 +149,7 @@
     <Resource Include="Project Plan.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="bakery.png" />
     <Content Include="regDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -7,10 +7,10 @@
         mc:Ignorable="d"
         Title="Catagorys" Height="450" Width="800">
     <Grid>
-        <Image HorizontalAlignment="Left" Height="157" Margin="73,53,0,0" VerticalAlignment="Top" Width="216" Source="/bakery.png" MouseDown="Backery_MouseDown"/>
-        <Image HorizontalAlignment="Left" Height="161" Margin="490,46,0,0" VerticalAlignment="Top" Width="216" Source="/fruits.jpg" MouseDown="Fruit_MouseDown"/>
-        <Image HorizontalAlignment="Left" Height="133" Margin="73,268,0,0" VerticalAlignment="Top" Width="220" Source="/vegetables.jpg" MouseDown="Veg_MouseDown"/>
-        <Image HorizontalAlignment="Left" Height="119" Margin="498,270,0,0" VerticalAlignment="Top" Width="203" Source="/tech.jpg" MouseDown="Tech_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="157" Margin="73,53,0,0" VerticalAlignment="Top" Width="216" Source="/Properties/bakery.png" MouseDown="Backery_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="161" Margin="490,46,0,0" VerticalAlignment="Top" Width="216" Source="/Properties/fruits.jpg" MouseDown="Fruit_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="133" Margin="73,268,0,0" VerticalAlignment="Top" Width="220" Source="/Properties/vegetables.jpg" MouseDown="Veg_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="119" Margin="498,270,0,0" VerticalAlignment="Top" Width="203" Source="/Properties/tech.jpg" MouseDown="Tech_MouseDown"/>
 
     </Grid>
 </Window>
