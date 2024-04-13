@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Data.SqlClient;
+using Microsoft.Win32;
+using System.Data; //SQL server local db
+
 namespace RegisterV2
 {
     /// <summary>
@@ -23,5 +27,33 @@ namespace RegisterV2
         {
             InitializeComponent();
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded()
+        {
+            string cn_string = Properties.Settings.Default.regDBConnectionString;
+
+            SqlConnection cn_connection = new SqlConnection(cn_string);
+
+            if (cn_connection.State != ConnectionState.Open)
+            {
+                cn_connection.Open();
+            }
+
+            string sql_Text = "SELECT * FROM MOCK_DATA;";
+
+            DataTable tbl = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(sql_Text, cn_connection);
+
+            lstCat.ItemsSource = tbl;
+
+        }
     }
+
+
+
 }

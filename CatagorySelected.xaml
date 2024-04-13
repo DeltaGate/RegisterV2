@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="CatagorySelected" Height="450" Width="800">
     <Grid>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="363*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Name="lstCat" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="2" Margin="55,0,-55,0">
+            <ListBox Height="100" Width="100" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        </ListBox>
 
     </Grid>
 </Window>

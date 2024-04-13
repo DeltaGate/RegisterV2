@@ -70,6 +70,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="regDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>regDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Page Include="Catagorys.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +123,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="regDBDataSet.xsc">
+      <DependentUpon>regDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="regDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>regDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="regDBDataSet.xss">
+      <DependentUpon>regDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
