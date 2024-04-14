@@ -48,8 +48,9 @@ namespace RegisterV2
 
             DataTable tbl = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql_Text, cn_connection);
+            adapter.Fill(tbl);
 
-            lstCat.DataSource = tbl;
+            lstCat.ItemsSource = tbl.DefaultView;
 
         }
     }
