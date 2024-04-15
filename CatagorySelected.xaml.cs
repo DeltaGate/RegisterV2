@@ -26,6 +26,7 @@ namespace RegisterV2
         public CatagorySelected()
         {
             InitializeComponent();
+            sqlHit();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -33,7 +34,7 @@ namespace RegisterV2
 
         }
 
-        private void Window_Loaded()
+        private void sqlHit()
         {
             string cn_string = Properties.Settings.Default.regDBConnectionString;
 
@@ -50,7 +51,9 @@ namespace RegisterV2
             SqlDataAdapter adapter = new SqlDataAdapter(sql_Text, cn_connection);
             adapter.Fill(tbl);
 
+            lstCat.Items.Clear();
             lstCat.ItemsSource = tbl.DefaultView;
+            lstCat.DisplayMemberPath = "item_name" + " " + "stock";
 
         }
     }
