@@ -26,26 +26,34 @@ namespace RegisterV2
 
         private void Fruit_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            CatagorySelected catagorySelected = new CatagorySelected();
+            CatagorySelected catagorySelected = new CatagorySelected("'fruit'");
             catagorySelected.Show();
+            var currentWindow = Window.GetWindow(this);
+            currentWindow.Close();
         }
 
         private void Veg_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            CatagorySelected catagorySelected = new CatagorySelected();
+            CatagorySelected catagorySelected = new CatagorySelected("'veg'");
             catagorySelected.Show();
+            var currentWindow = Window.GetWindow(this);
+            currentWindow.Close();
         }
 
         private void Backery_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            CatagorySelected catagorySelected = new CatagorySelected();
+            CatagorySelected catagorySelected = new CatagorySelected("'bakery'");
             catagorySelected.Show();
+            var currentWindow = Window.GetWindow(this);
+            currentWindow.Close();
         }
 
         private void Tech_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            CatagorySelected catagorySelected = new CatagorySelected();
+            CatagorySelected catagorySelected = new CatagorySelected("'tech'");
             catagorySelected.Show();
+            var currentWindow = Window.GetWindow(this);
+            currentWindow.Close();
         }
     }
 }

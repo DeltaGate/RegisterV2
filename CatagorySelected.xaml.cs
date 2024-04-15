@@ -23,10 +23,10 @@ namespace RegisterV2
     /// </summary>
     public partial class CatagorySelected : Window
     {
-        public CatagorySelected()
+        public CatagorySelected(string catagorySelectedPull)
         {
             InitializeComponent();
-            sqlHit();
+            sqlHit(catagorySelectedPull);
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -34,7 +34,7 @@ namespace RegisterV2
 
         }
 
-        private void sqlHit()
+        private void sqlHit(string catagorySelectedPull)
         {
             string cn_string = Properties.Settings.Default.regDBConnectionString;
 
@@ -45,7 +45,7 @@ namespace RegisterV2
                 cn_connection.Open();
             }
 
-            string sql_Text = "SELECT * FROM MOCK_DATA;";
+            string sql_Text = "SELECT * FROM MOCK_DATA WHERE CATEGORY = " + catagorySelectedPull;
 
             DataTable tbl = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql_Text, cn_connection);
@@ -53,7 +53,7 @@ namespace RegisterV2
 
             lstCat.Items.Clear();
             lstCat.ItemsSource = tbl.DefaultView;
-            lstCat.DisplayMemberPath = "item_name" + " " + "stock";
+            lstCat.DisplayMemberPath = "item_name";
 
         }
     }
