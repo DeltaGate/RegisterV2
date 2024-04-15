@@ -11,7 +11,7 @@
             <ColumnDefinition Width="37*"/>
             <ColumnDefinition Width="363*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Name="lstCat" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="2">
+        <ListBox Name="lstCat" SelectionChanged="ListBox_SelectionChanged" MouseDoubleClick="lstCat_MouseDoubleClick" Grid.ColumnSpan="2">
             <ListBox Height="275" Width="572" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         </ListBox>
 

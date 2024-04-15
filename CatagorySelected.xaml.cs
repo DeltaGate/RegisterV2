@@ -34,6 +34,8 @@ namespace RegisterV2
 
         }
 
+        //Logic for accessing data and drawing data
+
         private void sqlHit(string catagorySelectedPull)
         {
             string cn_string = Properties.Settings.Default.regDBConnectionString;
@@ -55,6 +57,27 @@ namespace RegisterV2
             lstCat.ItemsSource = tbl.DefaultView;
             lstCat.DisplayMemberPath = "item_name";
 
+        }
+
+        private void lstCat_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            // Check if an item is actually selected
+            if (lstCat.SelectedItem != null)
+            {
+                // logic finds the main window within method so it can be called.
+                MainWindow otherWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+
+                // Assuming you have a property in OtherWindow to receive the double value
+                double valueToSend = 9.99; //Convert.ToDouble(itemList.SelectedItem);
+
+                // Pass the double value to the other window
+                otherWindow.ReceiveDoubleValue(valueToSend);
+
+                // close current window when done
+                var currentWindow = Window.GetWindow(this);
+                currentWindow.Close();
+
+            }
         }
     }
 

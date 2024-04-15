@@ -30,6 +30,18 @@ namespace RegisterV2
         }
 
 
+        //Logic to recieve catagory found items
+
+        public void ReceiveDoubleValue(double value)
+        {
+            // Do something with the received value
+            // For example, display it in a TextBox named "doubleTextBox"
+            priceCount.Text = Convert.ToString(value);
+            price = price + value.ToString();
+        }
+
+
+
         // Button Controls & action logic
 
         private void btn1_Click(object sender, RoutedEventArgs e)
