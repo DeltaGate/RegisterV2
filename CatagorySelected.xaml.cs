@@ -47,15 +47,23 @@ namespace RegisterV2
                 cn_connection.Open();
             }
 
-            string sql_Text = "SELECT * FROM MOCK_DATA WHERE CATEGORY = " + catagorySelectedPull;
+            string sql_Text = "SELECT * FROM goods WHERE CATEGORY = " + catagorySelectedPull;
 
             DataTable tbl = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(sql_Text, cn_connection);
             adapter.Fill(tbl);
 
+            //add adition column to concat values from item and price to show both in catagory selection
+
+            tbl.Columns.Add("DisplayColumn", typeof(string));
+            foreach (DataRow row in tbl.Rows)
+            {
+                row["DisplayColumn"] = row["item_name"].ToString() + "                      £" + row["price"].ToString();
+            }
+
             lstCat.Items.Clear();
             lstCat.ItemsSource = tbl.DefaultView;
-            lstCat.DisplayMemberPath = "item_name";
+            lstCat.DisplayMemberPath = "DisplayColumn";
 
         }
 
@@ -67,8 +75,11 @@ namespace RegisterV2
                 // logic finds the main window within method so it can be called.
                 MainWindow otherWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
 
-                // Assuming you have a property in OtherWindow to receive the double value
-                double valueToSend = 9.99; //Convert.ToDouble(itemList.SelectedItem);
+
+                DataRowView selectedRow = lstCat.SelectedItem as DataRowView;
+
+
+                double valueToSend = Convert.ToDouble(selectedRow["price"]); 
 
                 // Pass the double value to the other window
                 otherWindow.ReceiveDoubleValue(valueToSend);

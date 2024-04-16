@@ -34,10 +34,12 @@ namespace RegisterV2
 
         public void ReceiveDoubleValue(double value)
         {
-            // Do something with the received value
-            // For example, display it in a TextBox named "doubleTextBox"
-            priceCount.Text = Convert.ToString(value);
-            price = price + value.ToString();
+            priceOverall = priceOverall + value;
+            priceCount.Text = priceOverall.ToString();
+            Label newLabel = new Label();
+            newLabel.FontSize = 35;
+            newLabel.Content = "  £ " + value;
+            receiptList.Children.Add(newLabel);
         }
 
 
