@@ -38,10 +38,11 @@
             <Button Grid.Column="1" Name="btnDel" Content="Delete" HorizontalAlignment="Left" Margin="454,610,0,0" VerticalAlignment="Top" Height="134" Width="180" RenderTransformOrigin="0.521,0.539" Click="btnDel_Click" FontSize="36"/>
             <Button Grid.Column="1" Name="btnDot" Content="." HorizontalAlignment="Left" Margin="454,486,0,0" VerticalAlignment="Top" Height="78" Width="120" RenderTransformOrigin="0.521,0.539" Click="btnDot_Click" FontSize="36"/>
             <Button Grid.Column="1" Name="btnBack" Content="&lt;" HorizontalAlignment="Left" Margin="132,486,0,0" VerticalAlignment="Top" Height="78" Width="120" RenderTransformOrigin="0.521,0.539" Click="btnBack_Click" FontSize="36"/>
-            <Button Grid.Column="1" Name="btnDiscount" Content="Discount" HorizontalAlignment="Left" Margin="44,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btnDiscount_Click" FontSize="24"/>
-            <Button Grid.Column="1" Name="btnItemSearch" Content="Item Search" HorizontalAlignment="Left" Margin="260,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btn1_Click" FontSize="24"/>
-            <Button Grid.Column="1" Name="btnCatagorySearch" Content="Catagory Search" HorizontalAlignment="Left" Margin="476,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btnCatagorySearch_Click" FontSize="24"/>
+            <Button Grid.Column="1" Name="btnDiscount" Content="Discount" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btnDiscount_Click" FontSize="24"/>
+            <Button Grid.Column="1" Name="btnItemSearch" Content="Item Search" HorizontalAlignment="Left" Margin="199,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btn1_Click" FontSize="24"/>
+            <Button Grid.Column="1" Name="btnCatagorySearch" Content="Catagory Search" HorizontalAlignment="Left" Margin="390,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btnCatagorySearch_Click" FontSize="24"/>
             <StackPanel Name="receiptList"/>
+            <Button Grid.Column="1" x:Name="btnIDSearch" Content="ID Search" HorizontalAlignment="Left" Margin="579,29,0,0" VerticalAlignment="Top" Height="78" Width="111" RenderTransformOrigin="0.521,0.539" Click="btnCatagorySearch_Click" FontSize="24"/>
         </Grid>
 
         <Rectangle Grid.Row="0" Fill="red"></Rectangle>
