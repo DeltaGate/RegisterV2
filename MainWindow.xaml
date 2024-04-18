@@ -42,7 +42,7 @@
             <Button Grid.Column="1" Name="btnItemSearch" Content="Item Search" HorizontalAlignment="Left" Margin="199,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btn1_Click" FontSize="24"/>
             <Button Grid.Column="1" Name="btnCatagorySearch" Content="Catagory Search" HorizontalAlignment="Left" Margin="390,29,0,0" VerticalAlignment="Top" Height="78" Width="184" RenderTransformOrigin="0.521,0.539" Click="btnCatagorySearch_Click" FontSize="24"/>
             <StackPanel Name="receiptList"/>
-            <Button Grid.Column="1" x:Name="btnIDSearch" Content="ID Search" HorizontalAlignment="Left" Margin="579,29,0,0" VerticalAlignment="Top" Height="78" Width="111" RenderTransformOrigin="0.521,0.539" Click="btnCatagorySearch_Click" FontSize="24"/>
+            <Button Grid.Column="1" x:Name="btnIDSearch" Content="ID Search" HorizontalAlignment="Left" Margin="579,29,0,0" VerticalAlignment="Top" Height="78" Width="111" RenderTransformOrigin="0.521,0.539" Click="btnIDSearch_Click" FontSize="24"/>
         </Grid>
 
         <Rectangle Grid.Row="0" Fill="red"></Rectangle>

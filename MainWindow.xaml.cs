@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
+using System.Data.SqlClient;
+using Microsoft.Win32;
+using System.Data; //SQL server local db
 
 namespace RegisterV2
 {
@@ -162,6 +168,26 @@ namespace RegisterV2
         {
             Catagorys catagorys = new Catagorys();
             catagorys.Show();
+        }
+
+        private void btnIDSearch_Click(object sender, RoutedEventArgs e)
+        {
+            string cn_string = Properties.Settings.Default.regDBConnectionString;
+
+            SqlConnection cn_connection = new SqlConnection(cn_string);
+
+            if (cn_connection.State != ConnectionState.Open)
+            {
+                cn_connection.Open();
+            }
+
+            string sql_Text = "SELECT * FROM goods WHERE CATEGORY = " + price;
+
+
+
+            priceOverall = priceOverall + Convert.ToDouble(price);
+            priceCount.Text = priceOverall.ToString();
+
         }
     }
 }
