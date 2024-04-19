@@ -40,7 +40,18 @@ namespace RegisterV2
         {
             string cn_string = Properties.Settings.Default.regDBConnectionString;
 
-            SqlConnection cn_connection = new SqlConnection(cn_string);
+
+
+           // string sqlQuery = "SELECT ColumnName FROM TableName WHERE Condition = @param"; // SQL query to retrieve the desired value
+           // object result = null; // Variable to store the result
+
+
+            //    SqlCommand command = new SqlCommand(sqlQuery, connection);
+            //    command.Parameters.AddWithValue("@param", yourParameterValue); // Add parameters if needed
+
+
+
+                SqlConnection cn_connection = new SqlConnection(cn_string);
 
             if (cn_connection.State != ConnectionState.Open)
             {
