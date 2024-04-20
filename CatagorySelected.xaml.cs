@@ -42,12 +42,7 @@ namespace RegisterV2
 
 
 
-           // string sqlQuery = "SELECT ColumnName FROM TableName WHERE Condition = @param"; // SQL query to retrieve the desired value
-           // object result = null; // Variable to store the result
 
-
-            //    SqlCommand command = new SqlCommand(sqlQuery, connection);
-            //    command.Parameters.AddWithValue("@param", yourParameterValue); // Add parameters if needed
 
 
 

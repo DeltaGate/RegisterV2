@@ -181,13 +181,22 @@ namespace RegisterV2
                 cn_connection.Open();
             }
 
-            string sql_Text = "SELECT * FROM goods WHERE CATEGORY = " + price;
+            string sql_Text = "SELECT price FROM goods WHERE id = " + price;
 
+            // string sqlQuery = "SELECT ColumnName FROM TableName WHERE Condition = @param"; // SQL query to retrieve the desired value
+            object result = null; // Variable to store the result
+
+
+            SqlCommand command = new SqlCommand(sql_Text, cn_connection);
+            //    command.Parameters.AddWithValue("@param", yourParameterValue); // Add parameters if needed
+
+            result = command.ExecuteScalar(); // Execute the query and retrieve the result
+            price = Convert.ToString(result);
 
 
             priceOverall = priceOverall + Convert.ToDouble(price);
             priceCount.Text = priceOverall.ToString();
-
+            price = price.Substring(0, 0);
         }
     }
 }
