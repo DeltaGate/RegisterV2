@@ -193,9 +193,15 @@ namespace RegisterV2
             result = command.ExecuteScalar(); // Execute the query and retrieve the result
             price = Convert.ToString(result);
 
-
             priceOverall = priceOverall + Convert.ToDouble(price);
             priceCount.Text = priceOverall.ToString();
+
+            Label newLabel = new Label();
+            newLabel.FontSize = 35;
+            newLabel.Content = price;
+            receiptList.Children.Add(newLabel);
+
+
             price = price.Substring(0, 0);
         }
     }
